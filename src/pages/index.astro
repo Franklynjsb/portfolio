@@ -1,0 +1,82 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import GitHub from "../components/icons/GitHub.astro";
+import Mail from "../components/icons/Mail.astro";
+import CVIcon from "../components/icons/CVIcon.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import SocialIcons from "../components/SocialIcons.astro";
+import Code from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
+---
+
+<Layout
+	title="Franco J. Quijada Portfolio - Desarrollador y Programador Web"
+	description="Portofolio para contratar a Franco Joel Quijada."
+>
+	<main class="px-4">
+		<SectionContainer class="py-44 pb-24" id="sobremi">
+			<img id="" class="img-container rounded-[200px] mb-[2rem]" width="200" height="200" src="https://firebasestorage.googleapis.com/v0/b/fjqfrontend.appspot.com/o/imagen%2Fperfil_1?alt=media&token=a4993591-c6b5-46ab-87db-a12a89421295" alt="Profile Picture">
+			<Badge>#OpenToWork</Badge>
+			<h1
+				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+			>
+				Hey, I'm Franco Quijada. <a
+					href="https://www.linkedin.com/in/francojquijada/"
+					target="_blank"
+					rel="noopener"
+					class="flex justify-center items-center"
+				>
+					
+				</a>
+			</h1>
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px] text-pretty">
+				<span style="color:#a8f755">Desarrollador web Full Stack.</span>
+				<span class="opacity-80">De Santa Fe, Argentina.</span>
+				Entusiasmado por empezar a crecer y desarrollarme dentro del mundo
+				<span style="color:#A9F754">IT</span>.
+				<span>Pueden <span style="color:#A9F754">comunicarse conmigo</span> a través de mi redes, o descargar mi <span style="color:#A9F754">CV</span>.:</span>
+			</h2>
+
+			<nav class="flex mt-4 flex-wrap">
+				<SocialIcons href="https://www.linkedin.com/in/francojquijada/">
+					<LinkedIn class="size-4 md:size-6" alt="LinkedIn icon" />
+				</SocialIcons>
+				<SocialIcons href="https://github.com/Franklynjsb">
+					<GitHub class="size-4 md:size-6" alt="GitHub icon" />
+				</SocialIcons>
+				<SocialIcons href="mailto:francojq41@gmail.com">
+					<Mail class="size-4 md:size-6" alt="Email icon" />
+				</SocialIcons>
+				<SocialIcons
+					href="../src/assets/Franco-Joel-Quijada-Junior-FullStack-Developer.pdf"
+					download="FrancoQuijada-FullStack.pdf"
+				>
+					<CVIcon
+						class="size-4 md:size-6"
+						alt="Curriculum Vitae icon"
+					/>
+				</SocialIcons>
+				<!-- 
+				<li>
+					<a href="https://www.linkedin.com/in/francojquijada/">
+						<LinkedIn />
+					</a>
+				</li> -->
+			</nav>
+		</SectionContainer>
+		<!-- <SectionContainer id="experiencia">
+			<Experiencia />
+
+		</SectionContainer> -->
+
+		<SectionContainer id="proyectos">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Code class="size-8" />
+				Proyectos
+			</h2>
+			<Projects />
+		</SectionContainer>
+	</main>
+</Layout>

@@ -1,0 +1,74 @@
+---
+import Angularicon from "./icons/Angularicon.astro";
+import HTMLicon from "./icons/HTMLicon.astro";
+import Javascripticon from "./icons/Javascripticon.astro";
+import NextJSicon from "./icons/NextJSicon.astro";
+
+
+const TAGS = {
+    NEXT: {
+        name: "NextJS",
+        class: "bg-black",
+        icon: NextJSicon,
+    },
+    ANGULAR: {
+        name: "Angular",
+        class: "bg-black",
+        icon: Angularicon,
+    },
+    JAVASCRIPT: {
+        name: "JavaScript",
+        class: "bg-black",
+        icon: Javascripticon,
+    },
+    HTML: {
+        name: "HTML",
+        class: "bg-black",
+        icon: HTMLicon,
+    }
+};
+const PROJECTS = [
+    {
+        title: "NoteAPP",
+        description:
+            "Aplicación de creación, eliminación, edición y guardado de notas, creado con EJS, Javascript, HTML y CSS.Con la utilizacion de MeiliSearch, Appwrite y NodeJS",
+        link: "",
+        github: "https://github.com/Franklynjsb/NoteAPP",
+        image: "../src/assets/NoteApp.jpg",
+        tags: [TAGS.NEXT, TAGS.ANGULAR, TAGS.JAVASCRIPT, TAGS.HTML],
+    }/* ,
+    {
+        title: "NoteAPP",
+        description:
+            "Aplicación de creación, eliminación, edición y guardado de notas, creado con EJS, Javascript, HTML y CSS.Con la utilizacion de MeiliSearch, Appwrite y NodeJS",
+        link: "",
+        github: "https://github.com/Franklynjsb/NoteAPP",
+        image: "../src/assets/NoteApp.jpg",
+        tags: [TAGS.NEXT, TAGS.ANGULAR, TAGS.JAVASCRIPT, TAGS.HTML],
+    }, */
+];
+---
+
+{
+    PROJECTS.map(({ image, title, description, tags }) => (
+        <article class="mt-4">
+            <h3 class="text-2xl font-semibold" style="color:#A9F754">
+                {title}
+            </h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-x-4 flex-row">
+                {tags.map((tag) => (
+                    <li>
+                        <tag.icon class="size-8"></tag.icon> 
+                    </li>
+                ))}
+            </ul>
+            <img
+                class="rounded shadow-2xl shadow-[#310a65] mt-4"
+                src={image}
+                alt={`Screenshot project ${image}`}
+                style="height:400px"
+            />
+        </article>
+    ))
+}
