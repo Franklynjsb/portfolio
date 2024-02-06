@@ -1,5 +1,6 @@
 ---
 import Angularicon from "./icons/Angularicon.astro";
+import CSSicon from "./icons/CSSicon.astro";
 import HTMLicon from "./icons/HTMLicon.astro";
 import Javascripticon from "./icons/Javascripticon.astro";
 import NextJSicon from "./icons/NextJSicon.astro";
@@ -25,6 +26,11 @@ const TAGS = {
         name: "HTML",
         class: "bg-black",
         icon: HTMLicon,
+    },
+    CSS: {
+        name: "CSS",
+        class: "bg-black",
+        icon: CSSicon,
     }
 };
 const PROJECTS = [
@@ -36,7 +42,16 @@ const PROJECTS = [
         github: "https://github.com/Franklynjsb/NoteAPP",
         image: "https://firebasestorage.googleapis.com/v0/b/fjqfrontend.appspot.com/o/imagen%2FNoteAPP.jpg?alt=media&token=39552664-1adf-4697-92a7-4f3233f014ef",
         tags: [TAGS.NEXT, TAGS.ANGULAR, TAGS.JAVASCRIPT, TAGS.HTML],
-    }/* ,
+    },
+    {
+        title: "Encriptador",
+        description:
+            "Aplicación desarrollada donde puede encriptar un texto o desencriptarlo. Este mismo proyecto fue realizado con tecnologías como Javascript, CSS y HTML.",
+        link: "https://encriptator.onrender.com",
+        github: "https://github.com/Franklynjsb/FJQ-AluraChallenge1",
+        image: "../src/assets/NoteApp.jpg",
+        tags: [TAGS.HTML, TAGS.JAVASCRIPT, TAGS.CSS],
+    },/* ,
     {
         title: "NoteAPP",
         description:
