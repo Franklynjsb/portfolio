@@ -72,7 +72,6 @@ const PROJECTS = [
                 {title}
             </h3>
             <p class="text-lg mb-4 text-pretty">{description}</p>
-            <a href={link}>if (link =! null) {<LinkIcon />}</a>
             <ul class="flex gap-x-4 flex-row">
                 {tags.map((tag) => (
                     <li>
@@ -80,12 +79,14 @@ const PROJECTS = [
                     </li>
                 ))}
             </ul>
-            <img
-                class="rounded shadow-2xl shadow-[#310a65] mt-4"
-                src={image}
-                alt={`Screenshot project ${image}`}
-                style="height:400px"
-            />
+            <a title="Image to proyect" href={link}>
+                <img
+                    class="rounded shadow-2xl shadow-[#310a65] mt-4"
+                    src={image}
+                    alt={`Screenshot project ${image}`}
+                    style="height:400px"
+                />
+            </a>
         </article>
     ))
 }
