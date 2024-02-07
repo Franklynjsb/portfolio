@@ -1,8 +1,10 @@
 ---
+import SocialIcons from "./SocialIcons.astro";
 import Angularicon from "./icons/Angularicon.astro";
 import CSSicon from "./icons/CSSicon.astro";
 import HTMLicon from "./icons/HTMLicon.astro";
 import Javascripticon from "./icons/Javascripticon.astro";
+import LinkIcon from "./icons/LinkIcon.astro";
 import NextJSicon from "./icons/NextJSicon.astro";
 
 
@@ -71,6 +73,9 @@ const PROJECTS = [
                 {title}
             </h3>
             <p class="text-lg mb-4 text-pretty">{description}</p>
+            <SocialIcons href="https://encriptator.onrender.com">
+					<LinkIcon class="size-4 md:size-6" alt="Link to proyect icon" />
+				</SocialIcons>
             <ul class="flex gap-x-4 flex-row">
                 {tags.map((tag) => (
                     <li>
