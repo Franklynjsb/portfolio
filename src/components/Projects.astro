@@ -39,7 +39,7 @@ const PROJECTS = [
         title: "NoteAPP",
         description:
             "Aplicación de creación, eliminación, edición y guardado de notas, creado con EJS, Javascript, HTML y CSS.Con la utilizacion de MeiliSearch, Appwrite y NodeJS",
-        link: "",
+        link: null,
         github: "https://github.com/Franklynjsb/NoteAPP",
         image: "https://firebasestorage.googleapis.com/v0/b/fjqfrontend.appspot.com/o/imagen%2FNoteAPP.jpg?alt=media&token=39552664-1adf-4697-92a7-4f3233f014ef",
         tags: [TAGS.NEXT, TAGS.ANGULAR, TAGS.JAVASCRIPT, TAGS.HTML],
@@ -66,15 +66,13 @@ const PROJECTS = [
 ---
 
 {
-    PROJECTS.map(({ link,image, title, description, tags }) => (
+    PROJECTS.map(({ link, image, title, description, tags }) => (
         <article class="mt-4">
             <h3 class="text-2xl font-semibold" style="color:#A9F754">
                 {title}
             </h3>
             <p class="text-lg mb-4 text-pretty">{description}</p>
-            if (link =! "") {
-                <a href={link}><LinkIcon /></a>
-            };
+            <a href={link}>if (link =! null) {<LinkIcon />}</a>
             <ul class="flex gap-x-4 flex-row">
                 {tags.map((tag) => (
                     <li>
