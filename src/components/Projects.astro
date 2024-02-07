@@ -7,7 +7,6 @@ import Javascripticon from "./icons/Javascripticon.astro";
 import LinkIcon from "./icons/LinkIcon.astro";
 import NextJSicon from "./icons/NextJSicon.astro";
 
-
 const TAGS = {
     NEXT: {
         name: "NextJS",
@@ -33,7 +32,7 @@ const TAGS = {
         name: "CSS",
         class: "bg-black",
         icon: CSSicon,
-    }
+    },
 };
 const PROJECTS = [
     {
@@ -53,7 +52,7 @@ const PROJECTS = [
         github: "https://github.com/Franklynjsb/FJQ-AluraChallenge1",
         image: "https://firebasestorage.googleapis.com/v0/b/fjqfrontend.appspot.com/o/imagen%2FEncriptator.jpg?alt=media&token=c924932d-54b4-4586-bb00-8c85a1a55b4c",
         tags: [TAGS.HTML, TAGS.JAVASCRIPT, TAGS.CSS],
-    },/* ,
+    } /* ,
     {
         title: "NoteAPP",
         description:
@@ -62,7 +61,7 @@ const PROJECTS = [
         github: "https://github.com/Franklynjsb/NoteAPP",
         image: "../src/assets/NoteApp.jpg",
         tags: [TAGS.NEXT, TAGS.ANGULAR, TAGS.JAVASCRIPT, TAGS.HTML],
-    }, */
+    }, */,
 ];
 ---
 
@@ -74,12 +73,12 @@ const PROJECTS = [
             </h3>
             <p class="text-lg mb-4 text-pretty">{description}</p>
             <SocialIcons href="https://encriptator.onrender.com">
-					<LinkIcon class="size-4 md:size-6" alt="Link to proyect icon" />
-				</SocialIcons>
+                <LinkIcon class="size-4 md:size-6" alt="Link to proyect icon" />
+            </SocialIcons>
             <ul class="flex gap-x-4 flex-row">
                 {tags.map((tag) => (
                     <li>
-                        <tag.icon class="size-8"></tag.icon> 
+                        <tag.icon class="size-8" />
                     </li>
                 ))}
             </ul>
