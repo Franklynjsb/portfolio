@@ -1,9 +1,12 @@
 ---
 import Angularicon from "./icons/Angularicon.astro";
+import SocialIcons from "./SocialIcons.astro";
 import CSSicon from "./icons/CSSicon.astro";
 import HTMLicon from "./icons/HTMLicon.astro";
 import Javascripticon from "./icons/Javascripticon.astro";
 import NextJSicon from "./icons/NextJSicon.astro";
+import Dockericon from "./icons/Dockericon.astro";
+import GitHub from "./icons/GitHub.astro";
 
 const TAGS = {
     NEXT: {
@@ -31,6 +34,16 @@ const TAGS = {
         class: "bg-black",
         icon: CSSicon,
     },
+    DOCKER: {
+        name: "Docker",
+        class: "bg-black",
+        icon: Dockericon,
+    },
+    GITHUB: {
+        name: "Git-Hub",
+        class: "bg-black",
+        icon: GitHub,
+    },
 };
 const PROJECTS = [
     {
@@ -50,6 +63,15 @@ const PROJECTS = [
         github: "https://github.com/Franklynjsb/FJQ-AluraChallenge1",
         image: "https://firebasestorage.googleapis.com/v0/b/fjqfrontend.appspot.com/o/imagen%2FEncriptator.jpg?alt=media&token=c924932d-54b4-4586-bb00-8c85a1a55b4c",
         tags: [TAGS.HTML, TAGS.JAVASCRIPT, TAGS.CSS],
+    },
+    {
+        title: "Discor-Bot",
+        description:
+            "Readaptación de Bot para Discord para que el mismo puediese tomar links de Youtube y reproducirlos mediante comandos en los canales de Discord.",
+        link: "",
+        github: "https://github.com/Franklynjsb/discord-bot",
+        image: "https://firebasestorage.googleapis.com/v0/b/fjqfrontend.appspot.com/o/imagen%2FMukaProyect.jpg?alt=media&token=8646af47-e781-4dac-884e-6271df19fced",
+        tags: [TAGS.JAVASCRIPT, TAGS.DOCKER],
     } /* ,
     {
         title: "NoteAPP",
@@ -64,16 +86,21 @@ const PROJECTS = [
 ---
 
 {
-    PROJECTS.map(({ link, image, title, description, tags }) => (
+    PROJECTS.map(({ link, image, github , title, description, tags }) => (
         <article class="mt-4">
             <h3 class="text-2xl font-semibold" style="color:#A9F754">
                 {title}
             </h3>
-            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <p class="text-lg mb-1 text-pretty">
+                {description}
+                <SocialIcons href={github}>
+					<GitHub class="size-4 md:size-6 mt-2" alt="GitHub icon" />
+			    </SocialIcons>
+            </p>
             <ul class="flex gap-x-4 flex-row">
                 {tags.map((tag) => (
                     <li>
-                        <tag.icon class="size-8" />
+                        <tag.icon class="size-4 md:size-6" />
                     </li>
                 ))}
             </ul>
