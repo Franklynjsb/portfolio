@@ -1,0 +1,43 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import SocialIcons from "@/components/SocialIcons.astro";
+import LinkedIn from "@/components/icons/LinkedIn.astro";
+import CVIcon from "@/components/icons/CVIcon.astro";
+---
+
+<Layout
+    title="Desing System"
+    description="Components that are used to create the system"
+>
+    <SectionContainer class="py-44 pb-32 flex flex-col gap-y-10">
+        <article class="mb-8">
+            <h1 class="mb-4">&lt;Badge&gt;</h1>
+            <Badge>#openToWork</Badge>
+        </article>
+        <article class="mb-8">
+            <h1 class="mb-4">&lt SocialIcons /&gt;</h1>
+            <div class="flex flex-wrap">
+                <SocialIcons href="https://www.linkedin.com/in/francojquijada/">
+                    <LinkedIn class="size-4 md:size-6" alt="LinkedIn icon" />
+                </SocialIcons>
+				<SocialIcons
+					href="https://firebasestorage.googleapis.com/v0/b/fjqfrontend.appspot.com/o/imagen%2FFranco%20Joel%20Quijada%20-%20Junior%20FullStack-Developer.pdf?alt=media&token=e87d3038-24a4-40e3-a2d7-51030296f18d"
+					download="FrancoQuijada-FullStack.pdf"
+				>
+					<CVIcon
+						class="size-4 md:size-6"
+						alt="Curriculum Vitae icon"
+					/>
+				</SocialIcons>
+            </div>
+        
+        </article>
+        <article></article>
+        <article></article>
+        <article></article>
+
+
+    </SectionContainer>
+</Layout>
