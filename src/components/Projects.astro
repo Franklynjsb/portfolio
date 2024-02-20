@@ -1,6 +1,6 @@
 ---
 import Angularicon from "./icons/Angularicon.astro";
-import SocialIcons from "./SocialIcons.astro";
+import LinkIcon from "./icons/LinkIcon.astro";
 import CSSicon from "./icons/CSSicon.astro";
 import HTMLicon from "./icons/HTMLicon.astro";
 import Javascripticon from "./icons/Javascripticon.astro";
@@ -10,6 +10,7 @@ import GitHub from "./icons/GitHub.astro";
 import MySQLicon from "./icons/MySQLicon.astro";
 import Javaicon from "./icons/Javaicon.astro";
 import Typescripticon from "./icons/Typescripticon.astro";
+import LinkButton from "./LinkButton.astro";
 
 const TAGS = {
     NEXT: {
@@ -128,9 +129,6 @@ const PROJECTS = [
             </h3>
             <p class="text-lg mb-1 text-pretty">
                 {description}
-                <SocialIcons href={github}>
-					<GitHub class="size-4 md:size-6 mt-2" alt="GitHub icon" />
-			    </SocialIcons>
             </p>
             <ul class="flex gap-x-4 flex-row">
                 {tags.map((tag) => (
@@ -141,12 +139,23 @@ const PROJECTS = [
             </ul>
             <a title="Image to proyect" href={link} target="_blank">
                 <img
-                    class="rounded shadow-2xl shadow-[#310a65] mt-4"
+                    loading="lazy"
+                    class="rounded shadow-2xl shadow-[#310a65] mt-4 aspect-video"
                     src={image}
                     alt={`Screenshot project ${image}`}
                     style="height:400px"
                 />
             </a>
+            <footer class="flex gap-x-4 items-end justify-start mt-4">
+                <LinkButton href={github} target="_blank">
+					<GitHub class="size-6 md:size-6" alt="GitHub icon" />
+                    Ver código fuente
+                </LinkButton>  
+                <LinkButton href={link}>
+                    <LinkIcon class="size-6 md:size-6" alt="Linked page icon" ></LinkIcon>
+                    Ir al sitio Web
+                </LinkButton>   
+            </footer>
         </article>
     ))
 }
