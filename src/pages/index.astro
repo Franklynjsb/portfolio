@@ -1,14 +1,18 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Badge from "../components/Badge.astro";
-import LinkedIn from "../components/icons/LinkedIn.astro";
-import GitHub from "../components/icons/GitHub.astro";
-import Mail from "../components/icons/Mail.astro";
-import CVIcon from "../components/icons/CVIcon.astro";
-import SectionContainer from "../components/SectionContainer.astro";
-import SocialIcons from "../components/SocialIcons.astro";
-import Code from "../components/icons/Code.astro";
-import Projects from "../components/Projects.astro";
+import Layout from "@/layouts/Layout.astro";
+
+import LinkedIn from "@/components/icons/LinkedIn.astro";
+import GitHub from "@/components/icons/GitHub.astro";
+import Mail from "@/components/icons/Mail.astro";
+import CVIcon from "@/components/icons/CVIcon.astro";
+import Code from "@/components/icons/Code.astro";
+import UserIcon from "@/components/icons/UserIcon.astro";
+
+import Badge from "@/components/Badge.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import SocialIcons from "@/components/SocialIcons.astro";
+import Projects from "@/components/Projects.astro";
+import AboutMe from "@/components/AboutMe.astro";
 ---
 
 <Layout
@@ -16,8 +20,8 @@ import Projects from "../components/Projects.astro";
 	description="Portofolio para contratar a Franco Joel Quijada."
 >
 	<main class="px-4">
-		<SectionContainer class="py-44 pb-24" id="sobremi">
-			<img id="" class="img-container rounded-[200px] mb-[2rem]" width="200" height="200" src="https://firebasestorage.googleapis.com/v0/b/fjqfrontend.appspot.com/o/imagen%2Fperfil_1?alt=media&token=a4993591-c6b5-46ab-87db-a12a89421295" alt="Profile Picture">
+		<SectionContainer class="pb-24" id="inicio">
+			<img id="" class="img-container rounded-[200px] mb-[2rem] px-[-4]" width="300" height="300" src="https://firebasestorage.googleapis.com/v0/b/fjqfrontend.appspot.com/o/imagen%2FAvatarProfile.png?alt=media&token=51aba910-8d27-46b2-b80e-063d018a42e4" alt="Profile Picture">
 			<Badge>#OpenToWork</Badge>
 			<h1
 				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
@@ -77,6 +81,13 @@ import Projects from "../components/Projects.astro";
 				Proyectos
 			</h2>
 			<Projects />
+		</SectionContainer>
+		<SectionContainer id="sobremi">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<UserIcon class="size-8" style="color:#A9F754" />
+				Sobre Mí
+			</h2>
+			<AboutMe />
 		</SectionContainer>
 	</main>
 </Layout>
