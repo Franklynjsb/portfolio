@@ -11,6 +11,7 @@ import MySQLicon from "./icons/MySQLicon.astro";
 import Javaicon from "./icons/Javaicon.astro";
 import Typescripticon from "./icons/Typescripticon.astro";
 import LinkButton from "./LinkButton.astro";
+import BadgeRed from "./BadgeRed.astro";
 
 const TAGS = {
     NEXT: {
@@ -69,6 +70,7 @@ const PROJECTS = [
         title: "NoteAPP",
         description:
             "Aplicación de creación, eliminación, edición y guardado de notas, creado con EJS, Javascript, HTML y CSS.Con la utilizacion de MeiliSearch, Appwrite y NodeJS",
+        status: null,
         link: null,
         github: "https://github.com/Franklynjsb/NoteAPP",
         image: "https://firebasestorage.googleapis.com/v0/b/fjqfrontend.appspot.com/o/imagen%2FNoteAPP.jpg?alt=media&token=39552664-1adf-4697-92a7-4f3233f014ef",
@@ -78,6 +80,7 @@ const PROJECTS = [
         title: "Encriptador",
         description:
             "Aplicación desarrollada donde puede encriptar un texto o desencriptarlo. Este mismo proyecto fue realizado con tecnologías como Javascript, CSS y HTML.",
+        status: null,
         link: "https://encriptator.onrender.com",
         github: "https://github.com/Franklynjsb/FJQ-AluraChallenge1",
         image: "https://firebasestorage.googleapis.com/v0/b/fjqfrontend.appspot.com/o/imagen%2FEncriptator.jpg?alt=media&token=c924932d-54b4-4586-bb00-8c85a1a55b4c",
@@ -87,6 +90,7 @@ const PROJECTS = [
         title: "Portofolio (Back End)",
         description:
             "Para el desarrollo del backend, se optó por Java, un lenguaje confiable y escalable que facilita la gestión eficiente del servidor. Java se encarga de manejar las solicitudes del cliente y asegura la estabilidad del sistema. La base de datos, implementada con MySQL, garantiza un almacenamiento seguro y eficiente de la información, respaldando la integridad y la disponibilidad de los datos. En conjunto, el frontend y el backend se integran para crear un portafolio interactivo que destaca tanto en diseño como en funcionalidad.",
+        status: "dead",
         link: "https://fjqfrontend.web.app",
         github: "https://github.com/Franklynjsb/proyectoBackEnd",
         image: "https://firebasestorage.googleapis.com/v0/b/fjqfrontend.appspot.com/o/imagen%2FPortofolio.jpg?alt=media&token=fac7bad5-d3e0-4ba8-a348-b9a528dd4aa6",
@@ -95,6 +99,7 @@ const PROJECTS = [
         title: "Portofolio (Front End)",
         description:
             "El componente frontal de este proyecto se ha construido con Angular, aprovechando su robusto conjunto de herramientas para crear un portafolio interactivo y atractivo. El uso de JavaScript y Typescript ha permitido desarrollar una lógica del cliente dinámica y eficiente, proporcionando una experiencia de usuario fluida. La interfaz de usuario resultante es moderna y agradable, brindando una plataforma interactiva para presentar proyectos y habilidades.",
+        status: "dead",
         link: "https://fjqfrontend.web.app",
         github: "https://github.com/Franklynjsb/proyectoFrontEnd",
         image: "https://firebasestorage.googleapis.com/v0/b/fjqfrontend.appspot.com/o/imagen%2FPortofolio.jpg?alt=media&token=fac7bad5-d3e0-4ba8-a348-b9a528dd4aa6",
@@ -104,6 +109,7 @@ const PROJECTS = [
         title: "Discord-Bot",
         description:
             "Readaptación de Bot para Discord para que el mismo puediese tomar links de Youtube y reproducirlos mediante comandos en los canales de Discord. Actualmente este mismo se encuentra fuera de servicio pero puede acceder a los repositorios del mismo.",
+        status: "dead",
         link: null,
         github: "https://github.com/Franklynjsb/discord-bot",
         image: "https://firebasestorage.googleapis.com/v0/b/fjqfrontend.appspot.com/o/imagen%2FMukaProyect.jpg?alt=media&token=8646af47-e781-4dac-884e-6271df19fced",
@@ -122,11 +128,17 @@ const PROJECTS = [
 ---
 <section class="flex flex-col gap-y-8">
 {
-    PROJECTS.map(({ link, image, github, title, description, tags }) => (
+    PROJECTS.map(({ link, image, github, status, title, description, tags }) => (
         <article class="mt-4">
             <h3 class="text-2xl font-semibold mt-10" style="color:#A9F754">
                 {title}
+                {status && (
+                    <BadgeRed>
+                        #dead
+                    </BadgeRed>
+                )}
             </h3>
+            
             <p class="text-lg mb-1 text-pretty">
                 {description}
             </p>
@@ -137,7 +149,7 @@ const PROJECTS = [
                     </li>
                 ))}
             </ul>
-            <a title="Image to proyect" href={link} target="_blank">
+            <a title="Image from proyect">
                 <img
                     loading="lazy"
                     class="rounded shadow-2xl shadow-[#310a65] mt-4 aspect-video"
