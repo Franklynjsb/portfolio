@@ -1,21 +1,17 @@
 ---
 import ExperienciaItems from "./ExperienciaItems.astro";
 
+//Create a list of work experience
 const EXPERIENCIA = [
     {
         date: "Marzo 1022",
         title: "Trabajo",
-        description: "All of the pages and components are first designed in Figma and wekeep a parity between the two versions even as we update the project.",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim",
         link: "#",
     },
-    {
-        date: "April 2022",
-        title: "E-Commerce UI code in Tailwind CSS",
-        description: "Get started with dozens of web components and interactive elements built on top of Tailwind CSS.",
-    }
 ];
 ---
-
+<!-- This maps the list from above to deploy it in the Layout -->
 <ol class="relative border-s border-gray-200 dark:border-gray-700 text-pretty">
     {
         EXPERIENCIA.map(experiencia =>(

@@ -1,13 +1,15 @@
-<header class="flex justify-center item-center py-5 w-full xl:w-[1120px] mx-auto sticky top-0 z-10">
+<header
+    class="flex justify-center item-center py-5 w-full xl:w-[1120px] mx-auto sticky top-0 z-10"
+>
     <!-- <img class="rounded-full w-12 h-12" src="https://i.pinimg.com/564x/6e/78/9b/6e789b05053a8734eeac7b079e8429d1.jpg" alt="Personal Photo"> -->
-    
+
     <nav class="flex flex-row gap-x-10 opacity-80">
         <!-- <nav class="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]">
             <nav class="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></nav>
         </nav> -->
-        <a href="/#top" class="transition">Inicio</a>
-        <a href="/#sobremi" class="transition">Sobre mí</a>
-        <a href="/#proyectos" class="transition">Proyectos</a>
+        <a href="/#top" class="transition">Home</a>
+        <a href="/#sobremi" class="transition">About Me</a>
+        <a href="/#proyectos" class="transition">Projects</a>
     </nav>
 </header>
 
@@ -16,17 +18,21 @@
         position: fixed;
         width: 100%;
         background: #18082d;
-        background: linear-gradient(0deg, rgba(24,8,45,0) 21%, rgba(24,8,45,1) 45%);
+        background: linear-gradient(
+            0deg,
+            rgba(24, 8, 45, 0) 21%,
+            rgba(24, 8, 45, 1) 45%
+        );
     }
     .menu-icon {
         display: none;
     }
-    @media (hover: hover){
-        nav:hover{
+    @media (hover: hover) {
+        nav:hover {
             opacity: 1;
         }
         a:hover {
-            color:#a8f755;
+            color: #a8f755;
         }
     }
 </style>
