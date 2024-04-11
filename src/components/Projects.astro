@@ -12,6 +12,7 @@ import Javaicon from "./icons/Javaicon.astro";
 import Typescripticon from "./icons/Typescripticon.astro";
 import LinkButton from "./LinkButton.astro";
 import BadgeRed from "./BadgeRed.astro";
+import Tailwindicon from "./icons/Tailwindicon.astro";
 
 
 //Create a tag list where its possible to select multiple items for projects
@@ -65,11 +66,26 @@ const TAGS = {
         name: "Typescript",
         class: "bg-black",
         icon: Typescripticon,
+    },
+    TAILWIND:{
+        name: "Tailwind",
+        class: "bg-black",
+        icon: Tailwindicon,
     }
 };
 
 //Created list of projects for exposing them On the Layout
 const PROJECTS = [
+    {
+        title: "MediLatam",
+        description:
+            "MediLatam is an application currently in development. Within the NoCountry simulation, we are creating this Telemedicine application, where I act as the director of the BackEnd development team. It is being developed using NodeJS with a BackEnd focused on Java and PostgreSQL with Docker packaging.",
+        status: "live",
+        link: null,
+        github: "https://github.com/No-Country/c17-49-n-java",
+        image: "https://firebasestorage.googleapis.com/v0/b/fjqfrontend.appspot.com/o/imagen%2F683shots_so.jpg?alt=media&token=6d30f005-b1cb-46ae-a305-d5dffeb3e52d",
+        tags: [TAGS.NEXT, TAGS.JAVA, TAGS.DOCKER, TAGS.TAILWIND],
+    },
     {
         title: "NoteAPP",
         descriptionES:
