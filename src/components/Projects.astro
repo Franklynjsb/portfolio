@@ -13,6 +13,7 @@ import Typescripticon from "./icons/Typescripticon.astro";
 import LinkButton from "./LinkButton.astro";
 import BadgeRed from "./BadgeRed.astro";
 import Tailwindicon from "./icons/Tailwindicon.astro";
+import CPPicon from "./icons/CPPicon.astro";
 
 
 //Create a tag list where its possible to select multiple items for projects
@@ -71,6 +72,11 @@ const TAGS = {
         name: "Tailwind",
         class: "bg-black",
         icon: Tailwindicon,
+    },
+    CPP:{
+        name: "CPP",
+        class: "bg-black",
+        icon: CPPicon,
     }
 };
 
@@ -110,6 +116,18 @@ const PROJECTS = [
         github: "https://github.com/Franklynjsb/FJQ-AluraChallenge1",
         image: "https://firebasestorage.googleapis.com/v0/b/fjqfrontend.appspot.com/o/imagen%2FEncriptator.jpg?alt=media&token=c924932d-54b4-4586-bb00-8c85a1a55b4c",
         tags: [TAGS.HTML, TAGS.JAVASCRIPT, TAGS.CSS],
+    },
+    {
+        title: "C++ Excersices",
+        description:
+            "Como parte de mis estudios en la Universidad Tecnológica Nacional FRSF, desarrollé y aplicé varios algoritmos utilizando C++.",
+        descriptionEN: 
+            "In the context of my studies at the National Technological University FRSF, I implemented various algorithms using C++.",
+        status: null,
+        link: null,
+        github: "https://github.com/Franklynjsb/AEEDD2024",
+        image: "https://firebasestorage.googleapis.com/v0/b/fjqfrontend.appspot.com/o/imagen%2F719shots_so.jpg?alt=media&token=d17955da-9803-41a4-852e-113e2870d10f",
+        tags: [TAGS.CPP],
     },
     {
         title: "Portofolio (Back End)",
