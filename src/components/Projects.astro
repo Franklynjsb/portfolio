@@ -14,6 +14,7 @@ import LinkButton from "./LinkButton.astro";
 import BadgeRed from "./BadgeRed.astro";
 import Tailwindicon from "./icons/Tailwindicon.astro";
 import CPPicon from "./icons/CPPicon.astro";
+import Bootstrapicon from "./icons/Bootstrapicon.astro";
 
 
 //Create a tag list where its possible to select multiple items for projects
@@ -77,13 +78,19 @@ const TAGS = {
         name: "CPP",
         class: "bg-black",
         icon: CPPicon,
-    }
+    },
+    BOOTSTRAP:{
+        name: "Bootstrap",
+        class: "bg-black",
+        icon: Bootstrapicon,
+    },
 };
 
 //Created list of projects for exposing them On the Layout
 const PROJECTS = [
     {
         title: "MediLatam",
+        descriptionES:"MediLatam es una aplicación actualmente en desarrollo. Dentro de la simulación de NoCountry, estamos creando esta aplicación de Telemedicina, donde actúo como el director del equipo de desarrollo BackEnd. Se está desarrollando utilizando NodeJS con un BackEnd enfocado en Java y PostgreSQL, empaquetado con Docker.",
         descriptionEN:
             "MediLatam is an application currently in development. Within the NoCountry simulation, we are creating this Telemedicine application, where I act as the director of the BackEnd development team. It is being developed using NodeJS with a BackEnd focused on Java and PostgreSQL with Docker packaging.",
         status: null,
@@ -107,7 +114,7 @@ const PROJECTS = [
     },
     {
         title: "Encriptator",
-        description:
+        descriptionES:
             "Aplicación desarrollada donde puede encriptar un texto o desencriptarlo. Este mismo proyecto fue realizado con tecnologías como Javascript, CSS y HTML.",
         descriptionEN: 
             "Developed application where you can encrypt or decrypt text. This project was implemented using technologies such as JavaScript, CSS, and HTML.",
@@ -118,9 +125,9 @@ const PROJECTS = [
         tags: [TAGS.HTML, TAGS.JAVASCRIPT, TAGS.CSS],
     },
     {
-        title: "C++ Excersices",
-        description:
-            "Como parte de mis estudios en la Universidad Tecnológica Nacional FRSF, desarrollé y aplicé varios algoritmos utilizando C++.",
+        title: "Ejercicios en C++",
+        descriptionES:
+            "Como parte de mis estudios en la Universidad Tecnológica Nacional FRSF, desarrollé y apliqué varios algoritmos utilizando C++.",
         descriptionEN: 
             "In the context of my studies at the National Technological University FRSF, I implemented various algorithms using C++.",
         status: null,
@@ -130,8 +137,18 @@ const PROJECTS = [
         tags: [TAGS.CPP],
     },
     {
+        title: "PresupuestosApp",
+        descriptionES:
+            "Aplicación realizada con Angular y bootstrap para calcular los gastos enlistandolos. Pone como límite el presupuesto ingresado.",
+        descriptionEN:"App developed in Angular and Bootstrap for budget calculations.",
+        link: "https://presupuestoapp-jrtv.onrender.com/ingresarPresupuesto",
+        github: "https://github.com/Franklynjsb/presupuestoApp",
+        image: "../src/assets/presupuestoapp.jpg",
+        tags: [TAGS.ANGULAR, TAGS.BOOTSTRAP],
+    },
+    {
         title: "Portofolio (Back End)",
-        description:
+        descriptionES:
             "Para el desarrollo del backend, se optó por Java, un lenguaje confiable y escalable que facilita la gestión eficiente del servidor. Java se encarga de manejar las solicitudes del cliente y asegura la estabilidad del sistema. La base de datos, implementada con MySQL, garantiza un almacenamiento seguro y eficiente de la información, respaldando la integridad y la disponibilidad de los datos. En conjunto, el frontend y el backend se integran para crear un portafolio interactivo que destaca tanto en diseño como en funcionalidad.",
         descriptionEN: "For the backend development, Java was chosen, a reliable and scalable language that facilitates efficient server management. Java handles client requests and ensures system stability. The database, implemented with MySQL, ensures secure and efficient storage of information, supporting data integrity and availability. Together, the frontend and backend integrate to create an interactive portfolio that excels in both design and functionality.",
         status: "dead",
@@ -141,7 +158,7 @@ const PROJECTS = [
         tags: [TAGS.JAVASCRIPT, TAGS.DOCKER, TAGS.MYSQL, TAGS.JAVA, TAGS.TYPESCRIPT],
     },{
         title: "Portofolio (Front End)",
-        description:
+        descriptionES:
             "El componente frontal de este proyecto se ha construido con Angular, aprovechando su robusto conjunto de herramientas para crear un portafolio interactivo y atractivo. El uso de JavaScript y Typescript ha permitido desarrollar una lógica del cliente dinámica y eficiente, proporcionando una experiencia de usuario fluida. La interfaz de usuario resultante es moderna y agradable, brindando una plataforma interactiva para presentar proyectos y habilidades.",
         descriptionEN: 
             "The front-end component of this project has been built with Angular, leveraging its robust set of tools to create an interactive and engaging portfolio. The use of JavaScript and TypeScript has allowed for the development of dynamic and efficient client-side logic, providing a smooth user experience. The resulting user interface is modern and pleasant, offering an interactive platform to showcase projects and skills.",
@@ -153,7 +170,7 @@ const PROJECTS = [
     },
     {
         title: "Discord-Bot",
-        description:
+        descriptionES:
             "Readaptación de Bot para Discord para que el mismo puediese tomar links de Youtube y reproducirlos mediante comandos en los canales de Discord. Actualmente este mismo se encuentra fuera de servicio pero puede acceder a los repositorios del mismo.",
         descriptionEN: 
             "Adaptation of a Discord bot to enable it to take YouTube links and play them through commands in Discord channels. Currently, this bot is out of service, but you can access its repositories.",
@@ -177,7 +194,7 @@ const PROJECTS = [
 <section class="flex flex-col gap-y-8">
 {
     //Data is processed looking for each item in the list of projects. Then the data is returned as needed.
-    PROJECTS.map(({ link, image, github, status, title, descriptionEN, tags }) => (
+    PROJECTS.map(({ link, image, github, status, title, descriptionES, tags }) => (
         <article class="mt-4">
             <h3 class="text-2xl font-semibold mt-6" style="color:#A9F754">
                 {title}
@@ -189,7 +206,7 @@ const PROJECTS = [
             </h3>
             
             <p class="text-lg mb-1 text-pretty">
-                {descriptionEN}
+                {descriptionES}
             </p>
             <ul class="flex gap-x-4 flex-row">
                 {tags.map((tag) => (
@@ -211,13 +228,13 @@ const PROJECTS = [
                 {github && (
                     <LinkButton href={github} target="_blank">
 					    <GitHub class="size-5 md:size-6" alt="GitHub icon" />
-                        View source code...
+                        Ver código fuente...
                     </LinkButton>
                 )}
                 {link && (
                     <LinkButton href={link}>
                         <LinkIcon class="size-5 md:size-6" alt="Linked page icon" ></LinkIcon>
-                        Go to the website.
+                        Ir a la web...
                     </LinkButton>  
                 )}
             </footer>

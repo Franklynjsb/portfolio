@@ -4,18 +4,18 @@ import ExperienciaItems from "./ExperienciaItems.astro";
 //Create a list of work experience
 const EXPERIENCIA = [
     {
-        date: "Marzo 1022",
-        title: "Trabajo",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim",
-        link: "#",
+        date: "Abril 2024 - Mayo 2024",
+        title: "Simulación de NoCountry",
+        description: "Habiendo quedado entre los 12 preseleccionado y dirigido el equipo BackEnd. Participé de la simulación realizada por NoCountry, urante la cual creamos una app de Telemedicina que actualmente continuamos perfeccionando.",
+        link: "https://github.com/Franklynjsb/c17-49-n-java",
     },
 ];
 ---
 <!-- This maps the list from above to deploy it in the Layout -->
-<ol class="relative border-s border-gray-200 dark:border-gray-700 text-pretty">
+<ol class="relative border-s border-gray-700">
     {
         EXPERIENCIA.map(experiencia =>(
-            <li class="mb-10 ms-4">
+            <li class=" ms-4">
                 <ExperienciaItems {...experiencia}/>
             </li>
         ))

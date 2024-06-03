@@ -13,6 +13,7 @@ import SectionContainer from "@/components/SectionContainer.astro";
 import SocialIcons from "@/components/SocialIcons.astro";
 import Projects from "@/components/Projects.astro";
 import AboutMe from "@/components/AboutMe.astro";
+import Experiencia from "@/components/Experiencia.astro";
 ---
 
 <Layout
@@ -42,13 +43,13 @@ import AboutMe from "@/components/AboutMe.astro";
 				</a>
 			</h1>
 			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px] text-pretty">
-				<span style="color:#a8f755">Full Stack Web Developer.</span>
-				<span class="opacity-80"> From Santa Fe, Argentina.</span>
-				Excited to start growing and developing within the world.
+				<span style="color:#a8f755">Desarrollador web FullStack</span>
+				<span class="opacity-80"> De Santa Fe, Argentina.</span>
+				Emocionado por crecer y aprender dentro de este universo del mundo 
 				<span style="color:#A9F754">IT</span>.
 				<span>
-					You can <span style="color:#A9F754">reach out to me</span> 
-					through my social networks or download my 
+					Puedes <span style="color:#A9F754">comunicarte</span>
+					conmigo a través de mis redes o descargar mi  
 					<span style="color:#A9F754">
 						CV.
 					</span> :
@@ -86,17 +87,71 @@ import AboutMe from "@/components/AboutMe.astro";
 				</li> -->
 				</nav>
 			</h2>
-			<!-- <SectionContainer id="experiencia">
-			<Experiencia />
+			<!---
+				<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px] text-pretty">
+				<span style="color:#a8f755">Full Stack Web Developer.</span>
+				<span class="opacity-80"> From Santa Fe, Argentina.</span>
+				Excited to start growing and developing within the world.
+				<span style="color:#A9F754">IT</span>.
+				<span>
+					You can <span style="color:#A9F754">reach out to me</span> 
+					through my social networks or download my 
+					<span style="color:#A9F754">
+						CV.
+					</span> :
+				</span>
 
-		</SectionContainer> -->
+				<nav class="flex mt-4 flex-wrap">
+					<SocialIcons
+						href="https://www.linkedin.com/in/francojquijada/"
+					>
+						<LinkedIn
+							class="size-5 md:size-6"
+							alt="LinkedIn icon"
+						/>
+					</SocialIcons>
+					<SocialIcons href="https://github.com/Franklynjsb">
+						<GitHub class="size-5 md:size-6" alt="GitHub icon" />
+					</SocialIcons>
+					<SocialIcons href="mailto:francojq41@gmail.com">
+						<Mail class="size-5 md:size-6" alt="Email icon" />
+					</SocialIcons>
+					<SocialIcons
+						href="https://firebasestorage.googleapis.com/v0/b/fjqfrontend.appspot.com/o/imagen%2FFranco%20Joel%20Quijada%20-%20Junior%20FullStack-Developer.pdf?alt=media&token=c6134bd4-f4cb-4f2f-8e05-b209a2f22bd7"
+						download="FrancoQuijada-FullStack.pdf"
+					>
+						<CVIcon
+							class="size-5 md:size-6"
+							alt="Curriculum Vitae icon"
+						/>
+					</SocialIcons> 
+						<li>
+							<a href="https://www.linkedin.com/in/francojquijada/">
+								<LinkedIn />
+							</a>
+						</li>
+					</nav>
+				</h2>
+			 -->
+			
+
+
+			<SectionContainer id="experiencia" class="mt-10">
+				<h2
+					class="text-3xl font-semibold mb-6 flex gap-x-3 items-center"
+				>
+					<UserIcon class="size-8" />
+					Experiencia
+				</h2>
+				<Experiencia />
+			</SectionContainer>
 
 			<SectionContainer id="proyectos" class="mt-10">
 				<h2
 					class="text-3xl font-semibold mb-6 flex gap-x-3 items-center"
 				>
 					<Code class="size-8" />
-					Proyects
+					Proyectos
 				</h2>
 				<Projects />
 			</SectionContainer>
@@ -105,7 +160,7 @@ import AboutMe from "@/components/AboutMe.astro";
 					class="text-3xl font-semibold mb-6 flex gap-x-3 items-center"
 				>
 					<UserIcon class="size-8" style="color:#A9F754" />
-					About me
+					Sobre mí
 				</h2>
 				<AboutMe />
 			</SectionContainer>
