@@ -15,6 +15,7 @@ import BadgeRed from "./BadgeRed.astro";
 import Tailwindicon from "./icons/Tailwindicon.astro";
 import CPPicon from "./icons/CPPicon.astro";
 import Bootstrapicon from "./icons/Bootstrapicon.astro";
+import Smalltalkicon from "./icons/Smalltalkicon.astro";
 
 //Create a tag list where its possible to select multiple items for projects
 const TAGS = {
@@ -83,6 +84,11 @@ const TAGS = {
         class: "bg-black",
         icon: Bootstrapicon,
     },
+    SMALLTALK: {
+        name: "Smalltalk",
+        class: "bg-black",
+        icon: Smalltalkicon,
+    },
 };
 
 //Created list of projects for exposing them On the Layout
@@ -96,7 +102,7 @@ const PROJECTS = [
         status: null,
         link: null,
         github: "https://github.com/Franklynjsb/c17-49-n-java",
-        image: "https://firebasestorage.googleapis.com/v0/b/fjqfrontend.appspot.com/o/imagen%2F683shots_so.jpg?alt=media&token=6d30f005-b1cb-46ae-a305-d5dffeb3e52d",
+        image: "https://cxvkaboicsgobxqgvfgn.supabase.co/storage/v1/object/sign/portfolio-database/Fotos-portfolio/squoshh-image-cpp.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hNmQxNDcwMS1jMzBlLTRjNjktOGVkMC04NjQ2NTkxYWZiNjIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwb3J0Zm9saW8tZGF0YWJhc2UvRm90b3MtcG9ydGZvbGlvL3NxdW9zaGgtaW1hZ2UtY3BwLmpwZyIsImlhdCI6MTc3NDU0Mjc3MywiZXhwIjozMTU1MzQzMDA2NzczfQ.knL52S3050pMpa_l4vY0he6CqA3cZQdmva2adgc7sH8",
         tags: [TAGS.NEXT, TAGS.JAVA, TAGS.DOCKER, TAGS.TAILWIND],
     },
     /*{
@@ -121,7 +127,7 @@ const PROJECTS = [
         status: null,
         link: "https://encriptator.onrender.com",
         github: "https://github.com/Franklynjsb/FJQ-AluraChallenge1",
-        image: "https://firebasestorage.googleapis.com/v0/b/fjqfrontend.appspot.com/o/imagen%2FEncriptator.jpg?alt=media&token=c924932d-54b4-4586-bb00-8c85a1a55b4c",
+        image: "https://cxvkaboicsgobxqgvfgn.supabase.co/storage/v1/object/sign/portfolio-database/Fotos-portfolio/Encriptator.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hNmQxNDcwMS1jMzBlLTRjNjktOGVkMC04NjQ2NTkxYWZiNjIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwb3J0Zm9saW8tZGF0YWJhc2UvRm90b3MtcG9ydGZvbGlvL0VuY3JpcHRhdG9yLmpwZyIsImlhdCI6MTc3Mzk1MTY2NywiZXhwIjozMTcxMDI0MTU2Njd9.IdeIocNvLLDi4MfN6xV885N9hju9MTmXl4pw-3eKMEI",
         tags: [TAGS.HTML, TAGS.JAVASCRIPT, TAGS.CSS],
     },
     {
@@ -144,7 +150,7 @@ const PROJECTS = [
         status: null,
         link: null,
         github: "https://github.com/Franklynjsb/AEEDD2024",
-        image: "https://firebasestorage.googleapis.com/v0/b/fjqfrontend.appspot.com/o/imagen%2F719shots_so.jpg?alt=media&token=d17955da-9803-41a4-852e-113e2870d10f",
+        image: "https://cxvkaboicsgobxqgvfgn.supabase.co/storage/v1/object/sign/portfolio-database/Fotos-portfolio/squoshh-image-cpp.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hNmQxNDcwMS1jMzBlLTRjNjktOGVkMC04NjQ2NTkxYWZiNjIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwb3J0Zm9saW8tZGF0YWJhc2UvRm90b3MtcG9ydGZvbGlvL3NxdW9zaGgtaW1hZ2UtY3BwLmpwZyIsImlhdCI6MTc3Mzk1MjIyOSwiZXhwIjozMTcxMDI0MTYyMjl9.M8CwnSDObUfbUirhAF5ri52vY_-3tA9e885RAsBBENM",
         tags: [TAGS.CPP],
     },
     {
@@ -156,7 +162,7 @@ const PROJECTS = [
         status: "dead",
         link: "https://fjqfrontend.web.app",
         github: "https://github.com/Franklynjsb/proyectoBackEnd",
-        image: "https://firebasestorage.googleapis.com/v0/b/fjqfrontend.appspot.com/o/imagen%2FPortofolio.jpg?alt=media&token=fac7bad5-d3e0-4ba8-a348-b9a528dd4aa6",
+        image: "https://cxvkaboicsgobxqgvfgn.supabase.co/storage/v1/object/sign/portfolio-database/Fotos-portfolio/Portofolio.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hNmQxNDcwMS1jMzBlLTRjNjktOGVkMC04NjQ2NTkxYWZiNjIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwb3J0Zm9saW8tZGF0YWJhc2UvRm90b3MtcG9ydGZvbGlvL1BvcnRvZm9saW8uanBnIiwiaWF0IjoxNzczOTUxNzM4LCJleHAiOjMxNzEwMjQxNTczOH0.staMYufGhNNfvLxQJ1BH33kiKlPMEcmwXJsJDwTrVZw",
         tags: [
             TAGS.JAVASCRIPT,
             TAGS.DOCKER,
@@ -174,7 +180,7 @@ const PROJECTS = [
         status: "dead",
         link: "https://fjqfrontend.web.app",
         github: "https://github.com/Franklynjsb/proyectoFrontEnd",
-        image: "https://firebasestorage.googleapis.com/v0/b/fjqfrontend.appspot.com/o/imagen%2FPortofolio.jpg?alt=media&token=fac7bad5-d3e0-4ba8-a348-b9a528dd4aa6",
+        image: "https://cxvkaboicsgobxqgvfgn.supabase.co/storage/v1/object/sign/portfolio-database/Fotos-portfolio/Portofolio.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hNmQxNDcwMS1jMzBlLTRjNjktOGVkMC04NjQ2NTkxYWZiNjIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwb3J0Zm9saW8tZGF0YWJhc2UvRm90b3MtcG9ydGZvbGlvL1BvcnRvZm9saW8uanBnIiwiaWF0IjoxNzczOTUxNzM4LCJleHAiOjMxNzEwMjQxNTczOH0.staMYufGhNNfvLxQJ1BH33kiKlPMEcmwXJsJDwTrVZw",
         tags: [TAGS.JAVASCRIPT, TAGS.CSS, TAGS.ANGULAR, TAGS.TYPESCRIPT],
     },
     {
@@ -186,8 +192,19 @@ const PROJECTS = [
         status: "dead",
         link: null,
         github: "https://github.com/Franklynjsb/discord-bot",
-        image: "https://firebasestorage.googleapis.com/v0/b/fjqfrontend.appspot.com/o/imagen%2FMukaProyect.jpg?alt=media&token=8646af47-e781-4dac-884e-6271df19fced",
+        image: "https://cxvkaboicsgobxqgvfgn.supabase.co/storage/v1/object/sign/portfolio-database/Fotos-portfolio/MukaProyect.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hNmQxNDcwMS1jMzBlLTRjNjktOGVkMC04NjQ2NTkxYWZiNjIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwb3J0Zm9saW8tZGF0YWJhc2UvRm90b3MtcG9ydGZvbGlvL011a2FQcm95ZWN0LmpwZyIsImlhdCI6MTc3Mzk1MTcxMiwiZXhwIjozMTcxMDI0MTU3MTJ9.tXrfKgSV91GJCZL0iMMVlV6c8BlLpU0jNdrZvC6bDCY",
         tags: [TAGS.JAVASCRIPT, TAGS.DOCKER],
+    },
+    {
+        title: "Base de Datos - Smalltalk",
+        descriptionES:
+            "Base de datos realizada con Smalltalk y con Prolog, para el sistema de gestión de datos sobre una clínica de donantes de sangre. En la misma es posible la alta, modificación y gestión de pacientes; a su véz permite realizar consultas en la misma utilizando prolog.",
+        descriptionEN: "",
+        status: null,
+        link: null,
+        github: "https://github.com/Franklynjsb/BaseDeDatosSmalltalk",
+        image: "",
+        tags: [TAGS.SMALLTALK],
     } /* ,
     {
         title: "NoteAPP",
